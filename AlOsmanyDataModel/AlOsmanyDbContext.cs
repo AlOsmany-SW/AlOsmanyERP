@@ -6,7 +6,7 @@ namespace AlOsmanyDataModel
 {
     public class AlOsmanyDbContext : DbContext
     {
-        public AlOsmanyDbContext() : base("Server=.;Database=AlOsmany;Trusted_Connection=True;")
+        public AlOsmanyDbContext() : base("Server=.;Database=AlOsmany;Encrypt=False;Trusted_Connection=True;")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AlOsmanyDbContext, Configuration>());
         }

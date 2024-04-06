@@ -34,11 +34,19 @@ namespace AlOsmany.Forms.Services
 
                 var alOsmanyDbContext = new AlOsmanyDbContext();
                 alOsmanyDbContext.Services.Add(service);
+                await alOsmanyDbContext.SaveChangesAsync();
 
                 if (!string.IsNullOrEmpty(_imagePath))
                 {
-                    var newImagePath = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "Services", service.Id + Path.GetExtension(_imagePath));
+                    var newImageDir = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources", "Services");
+
+                    if (!Directory.Exists(newImageDir))
+                        Directory.CreateDirectory(newImageDir);
+
+                    var newImagePath = Path.Combine(newImageDir, service.Id + Path.GetExtension(_imagePath));
+
                     File.Copy(_imagePath, newImagePath);
+
                     service.Image = newImagePath;
                 }
 

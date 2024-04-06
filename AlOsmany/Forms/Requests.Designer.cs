@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlOsmany.Forms
+﻿namespace AlOsmany.Forms
 {
     partial class Requests
     {

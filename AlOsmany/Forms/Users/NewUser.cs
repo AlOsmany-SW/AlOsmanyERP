@@ -54,12 +54,19 @@ namespace AlOsmany.Forms.Users
 
                 var alOsmanyDbContext = new AlOsmanyDbContext();
                 alOsmanyDbContext.Users.Add(user);
-
+                await alOsmanyDbContext.SaveChangesAsync();
 
                 if (!string.IsNullOrEmpty(_imagePath))
                 {
-                    var newImagePath = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "Users", user.Id + Path.GetExtension(_imagePath));
-                    File.Copy(_imagePath, newImagePath);                    
+                    var newImageDir = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources", "Users");
+
+                    if (!Directory.Exists(newImageDir))
+                        Directory.CreateDirectory(newImageDir);
+
+                    var newImagePath = Path.Combine(newImageDir, user.Id + Path.GetExtension(_imagePath));
+
+                    File.Copy(_imagePath, newImagePath);
+
                     user.Image = newImagePath;
                 }
 
@@ -68,6 +75,10 @@ namespace AlOsmany.Forms.Users
                 MessageBox.Show("User Saved.", "New User");
 
                 Close();
+
+                var thread = new Thread(() => Application.Run(new LogIn()));
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
             }
             catch (Exception ex)
             {

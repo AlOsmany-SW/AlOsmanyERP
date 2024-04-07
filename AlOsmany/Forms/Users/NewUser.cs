@@ -36,7 +36,7 @@ namespace AlOsmany.Forms.Users
                 var phoneNumber = txtPhoneNumber.Text;
                 Enum.TryParse(comboBox1.Text, out UserRole role);
 
-                if (!fullName.All(char.IsLetter))
+                if (!fullName.All(ch => char.IsLetter(ch) || ch == ' '))
                     throw new FormatException("Not valid name. Full name shouldn't have other than letters.");
 
                 if (!phoneNumber.All(char.IsDigit))
@@ -47,7 +47,7 @@ namespace AlOsmany.Forms.Users
                     FullName = fullName,
                     UserName = userName,
                     Password = password,
-                    PhoneNumber = phoneNumber,
+                    PhoneNumber = phoneNumber == "0" ? null : phoneNumber,
                     Role = role,
                     Image = _imagePath
                 };

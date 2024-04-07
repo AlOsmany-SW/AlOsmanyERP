@@ -116,22 +116,6 @@ namespace AlOsmany.Forms.Services
 
             txtTotalMoney.Text = totalMoney.ToString();
 
-            if (dataGridView1.SelectedCells.Count != 0)
-            {
-                var id = (int)dataGridView1.CurrentRow.Cells[0].Value;
-
-                var selectedService = _requestedServices.Where(service => service.Id == id).FirstOrDefault();
-
-                txtName.Text = selectedService.Name;
-                txtFees.Text = selectedService.Fees.ToString();
-                txtDiscount.Text = selectedService.Discount.ToString();
-                txtSurcharge.Text = selectedService.Surcharge.ToString();
-                txtNotes.Text = selectedService.Notes;
-                pictureBox1.ImageLocation = selectedService.Image;
-
-                return;
-            }
-
             txtName.Text = string.Empty;
             txtFees.Text = string.Empty;
             txtDiscount.Text = string.Empty;

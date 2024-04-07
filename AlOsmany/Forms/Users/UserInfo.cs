@@ -43,15 +43,15 @@ namespace AlOsmany.Forms.Users
                 var password = txtPassword.Text;
                 var phoneNumber = txtPhoneNumber.Text;
 
-                if (!fullName.All(char.IsLetter))
-                    throw new Exception("Not valid name.");
+                if (!fullName.All(ch => char.IsLetter(ch) || ch == ' '))
+                    throw new FormatException("Not valid name. Full name shouldn't have other than letters.");
 
                 if (!phoneNumber.All(char.IsDigit))
-                    throw new Exception("Not valid phone number.");
+                    throw new FormatException("Not valid phone number. Phone number shouldn't have other than digits.");
 
                 _userLoggedIn.FullName = fullName;
                 _userLoggedIn.Password = password;
-                _userLoggedIn.PhoneNumber = phoneNumber;
+                _userLoggedIn.PhoneNumber = phoneNumber == "0" ? null : phoneNumber;
 
                 var alOsmanyDbContext = new AlOsmanyDbContext();
                 await alOsmanyDbContext.SaveChangesAsync();

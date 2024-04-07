@@ -50,9 +50,9 @@ namespace AlOsmany.Forms.Services
             dataGridView1.DataSource = await _alOsmanyDbContext.Services.Where(service => service.Name.Contains(txtSearchName.Text)).ToListAsync();
         }
 
-        private async void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = await _alOsmanyDbContext.Services.ToListAsync();
+            Clear();
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
@@ -73,7 +73,13 @@ namespace AlOsmany.Forms.Services
 
                     if (!string.IsNullOrEmpty(_imagePath))
                     {
-                        var newImagePath = Path.Combine(Directory.GetCurrentDirectory(), "Resources", "Services", selectedService.Id + Path.GetExtension(_imagePath));
+                        var newImageDir = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Resources", "Services");
+
+                        if (!Directory.Exists(newImageDir))
+                            Directory.CreateDirectory(newImageDir);
+
+                        var newImagePath = Path.Combine(newImageDir, selectedService.Id + Path.GetExtension(_imagePath));
+
                         File.Copy(_imagePath, newImagePath);
 
                         selectedService.Image = newImagePath;
@@ -181,23 +187,6 @@ namespace AlOsmany.Forms.Services
             dataGridView1.DataSource = await _alOsmanyDbContext.Services.ToListAsync();
 
             txtSearchName.Text = string.Empty;
-
-            if (dataGridView1.SelectedCells.Count != 0)
-            {
-                var id = (int)dataGridView1.CurrentRow.Cells[0].Value;
-
-                var selectedService = _alOsmanyDbContext.Services.Where(service => service.Id == id).FirstOrDefault();
-
-                txtName.Text = selectedService.Name;
-                txtFees.Text = selectedService.Fees.ToString();
-                txtDiscount.Text = selectedService.Discount.ToString();
-                txtSurcharge.Text = selectedService.Surcharge.ToString();
-                txtNotes.Text = selectedService.Notes;
-                pictureBox1.ImageLocation = selectedService.Image;
-
-                return;
-            }
-
             txtName.Text = string.Empty;
             txtFees.Text = string.Empty;
             txtDiscount.Text = string.Empty;

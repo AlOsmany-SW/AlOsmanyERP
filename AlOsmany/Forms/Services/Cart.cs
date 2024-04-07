@@ -44,14 +44,14 @@ namespace AlOsmany.Forms.Services
 
             var request = new Request
             {
-                CustomerId = _userLoggedIn.Id,
+                CreatedBy = _userLoggedIn.Id,
                 TotalFees = decimal.Parse(txtTotalMoney.Text),
-                Date = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow
             };
 
             var alOsmanyDbContext = new AlOsmanyDbContext();
-
             alOsmanyDbContext.Requests.Add(request);
+            await alOsmanyDbContext.SaveChangesAsync();
 
             while (_requestedServices.Count > 0)
             {

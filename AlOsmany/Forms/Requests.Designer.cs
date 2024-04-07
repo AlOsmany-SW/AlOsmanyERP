@@ -46,9 +46,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtWorker = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCustomer = new System.Windows.Forms.TextBox();
+            this.txtCreatedBy = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
+            this.txtCreatedAt = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.comboType = new System.Windows.Forms.ComboBox();
@@ -90,14 +90,14 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1232, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1232, 28);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.exitToolStripMenuItem.Text = "EXIT";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -247,13 +247,13 @@
             this.label5.TabIndex = 59;
             this.label5.Text = "Worker";
             // 
-            // txtCustomer
+            // txtCreatedBy
             // 
-            this.txtCustomer.Location = new System.Drawing.Point(930, 450);
-            this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(285, 22);
-            this.txtCustomer.TabIndex = 60;
+            this.txtCreatedBy.Location = new System.Drawing.Point(930, 450);
+            this.txtCreatedBy.Name = "txtCreatedBy";
+            this.txtCreatedBy.ReadOnly = true;
+            this.txtCreatedBy.Size = new System.Drawing.Size(285, 22);
+            this.txtCreatedBy.TabIndex = 60;
             // 
             // label6
             // 
@@ -266,13 +266,13 @@
             this.label6.TabIndex = 61;
             this.label6.Text = "Customer";
             // 
-            // txtDate
+            // txtCreatedAt
             // 
-            this.txtDate.Location = new System.Drawing.Point(930, 410);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.ReadOnly = true;
-            this.txtDate.Size = new System.Drawing.Size(285, 22);
-            this.txtDate.TabIndex = 62;
+            this.txtCreatedAt.Location = new System.Drawing.Point(930, 410);
+            this.txtCreatedAt.Name = "txtCreatedAt";
+            this.txtCreatedAt.ReadOnly = true;
+            this.txtCreatedAt.Size = new System.Drawing.Size(285, 22);
+            this.txtCreatedAt.TabIndex = 62;
             // 
             // label7
             // 
@@ -281,9 +281,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(775, 405);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 29);
+            this.label7.Size = new System.Drawing.Size(123, 29);
             this.label7.TabIndex = 63;
-            this.label7.Text = "Date";
+            this.label7.Text = "CreatedAt";
             // 
             // button3
             // 
@@ -319,9 +319,9 @@
             this.ClientSize = new System.Drawing.Size(1232, 688);
             this.Controls.Add(this.comboType);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.txtDate);
+            this.Controls.Add(this.txtCreatedAt);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtCustomer);
+            this.Controls.Add(this.txtCreatedBy);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtWorker);
             this.Controls.Add(this.label5);
@@ -369,9 +369,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtWorker;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCustomer;
+        private System.Windows.Forms.TextBox txtCreatedBy;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDate;
+        private System.Windows.Forms.TextBox txtCreatedAt;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboType;

@@ -25,7 +25,8 @@ namespace AlOsmany.Forms.Users
                 user.UserName,
                 user.FullName,
                 user.Role,
-                user.PhoneNumber
+                user.PhoneNumber,
+                user.Image
             }).ToListAsync().Result;
         }
 

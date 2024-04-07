@@ -14,11 +14,11 @@ namespace AlOsmanyDataModel.Models
         public RequestType Type { get; set; }
         [Required]
         public decimal TotalFees { get; set; }
-        [Required]
-        public DateTime Date { get; set; }
 
         [Required]
-        public int CustomerId { get; set; }
+        public DateTime CreatedAt { get; set; }
+        [Required]
+        public int CreatedBy { get; set; }
 
         public int? WorkerId { get; set; }
     }

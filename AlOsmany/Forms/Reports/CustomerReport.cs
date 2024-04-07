@@ -26,7 +26,6 @@ namespace AlOsmany.Forms.Reports
                 user.Id,
                 user.UserName,
                 user.FullName,
-                user.Role,
                 user.PhoneNumber
             }).ToListAsync().Result;
 
@@ -93,7 +92,7 @@ namespace AlOsmany.Forms.Reports
                 var totalRequests = 0;
 
                 foreach (var request in _alOsmanyDbContext.Requests)
-                    if (request.Date.Year == year && request.Date.Month == month && request.CustomerId == selectedUser.Id)
+                    if (request.CreatedAt.Year == year && request.CreatedAt.Month == month && request.CreatedBy == selectedUser.Id)
                     {
                         totalFees += request.TotalFees;
                         ++totalRequests;
@@ -116,7 +115,6 @@ namespace AlOsmany.Forms.Reports
                 user.Id,
                 user.UserName,
                 user.FullName,
-                user.Role,
                 user.PhoneNumber
             }).ToListAsync();
 

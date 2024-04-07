@@ -86,7 +86,7 @@ namespace AlOsmany.Forms.Reports
                 var totalRequests = 0;
 
                 foreach (var service in _alOsmanyDbContext.RequestedServices)
-                    if (service.RequestTime.Year == year && service.RequestTime.Month == month)
+                    if (service.CreatedAt.Year == year && service.CreatedAt.Month == month)
                     {
                         totalFees += service.Fees;
                         totalFees -= service.Discount;

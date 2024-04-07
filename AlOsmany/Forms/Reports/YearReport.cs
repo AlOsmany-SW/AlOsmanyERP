@@ -52,7 +52,7 @@ namespace AlOsmany.Forms.Reports
 
             var alOsmanyDbContext = new AlOsmanyDbContext();
 
-            var requests = alOsmanyDbContext.Requests.Where(request => request.Date.Year == year);
+            var requests = alOsmanyDbContext.Requests.Where(request => request.CreatedAt.Year == year);
 
             decimal januaryFees = default;
             var januaryRequests = 0;
@@ -92,7 +92,7 @@ namespace AlOsmany.Forms.Reports
 
             foreach (var request in requests)
             {
-                switch (request.Date.Month)
+                switch (request.CreatedAt.Month)
                 {
                     case 1:
                         januaryRequests++;

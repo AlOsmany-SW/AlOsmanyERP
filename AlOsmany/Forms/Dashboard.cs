@@ -23,8 +23,12 @@ namespace AlOsmany.Forms
             if (_userLoggedIn.Role != UserRole.Admin)
                 userListToolStripMenuItem.Visible = false;
 
+            if (_userLoggedIn.Role == UserRole.Worker)
+                newUserToolStripMenuItem.Visible = false;
+
             if (_userLoggedIn.Role == UserRole.Customer)
             {
+                newUserToolStripMenuItem.Visible = false;
                 newServiceToolStripMenuItem.Visible = false;
                 yearReportToolStripMenuItem.Visible = false;
                 serviceReportToolStripMenuItem.Visible = false;
@@ -37,42 +41,6 @@ namespace AlOsmany.Forms
             Close();
 
             var thread = new Thread(() => Application.Run(new LogIn()));
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
-        private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            NewUser newUser;
-
-            if (_userLoggedIn.Role == UserRole.Admin)
-                newUser = new NewUser(_userLoggedIn, UserRole.Admin, UserRole.Manager, UserRole.Worker, UserRole.Customer);
-            else if (_userLoggedIn.Role == UserRole.Manager)
-                newUser = new NewUser(_userLoggedIn, UserRole.Worker, UserRole.Customer);
-            else
-                newUser = new NewUser(_userLoggedIn, UserRole.Customer);
-
-            Close();
-
-            var thread = new Thread(() => Application.Run(newUser));
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
-        private void newServiceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-
-            var thread = new Thread(() => Application.Run(new NewService(_userLoggedIn)));
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
-        private void requestsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-
-            var thread = new Thread(() => Application.Run(new Requests(_userLoggedIn)));
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
@@ -103,16 +71,6 @@ namespace AlOsmany.Forms
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
-
-        private void userListToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-
-            var thread = new Thread(() => Application.Run(new UserList(_userLoggedIn)));
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -127,6 +85,49 @@ namespace AlOsmany.Forms
             Close();
 
             var thread = new Thread(() => Application.Run(new ServiceList(_userLoggedIn)));
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void newServiceToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Close();
+
+            var thread = new Thread(() => Application.Run(new NewService(_userLoggedIn)));
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewUser newUser;
+
+            if (_userLoggedIn.Role == UserRole.Admin)
+                newUser = new NewUser(_userLoggedIn, UserRole.Customer, UserRole.Worker, UserRole.Manager, UserRole.Admin);
+            else
+                newUser = new NewUser(_userLoggedIn, UserRole.Worker);
+
+            Close();
+
+            var thread = new Thread(() => Application.Run(newUser));
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void userListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+
+            var thread = new Thread(() => Application.Run(new UserList(_userLoggedIn)));
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+
+            var thread = new Thread(() => Application.Run(new Requests(_userLoggedIn)));
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }

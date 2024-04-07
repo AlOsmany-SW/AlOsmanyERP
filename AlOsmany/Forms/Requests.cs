@@ -22,7 +22,7 @@ namespace AlOsmany.Forms
 
             if (_userLoggedIn.Role == UserRole.Customer)
             {
-                dataGridView1.DataSource = _alOsmanyDbContext.Requests.Where(request => request.CustomerId == _userLoggedIn.Id).ToListAsync().Result;
+                dataGridView1.DataSource = _alOsmanyDbContext.Requests.Where(request => request.CreatedBy == _userLoggedIn.Id).ToListAsync().Result;
                 button3.Visible = false;
             }
             else if (_userLoggedIn.Role == UserRole.Worker)
@@ -54,7 +54,7 @@ namespace AlOsmany.Forms
         private async void button1_Click(object sender, EventArgs e)
         {
             if (_userLoggedIn.Role == UserRole.Customer)
-                dataGridView1.DataSource = await _alOsmanyDbContext.Requests.Where(request => request.CustomerId == _userLoggedIn.Id && ((checkNew.Checked && request.Type == RequestType.New) || (checkAssigned.Checked && request.Type == RequestType.Assigned) || (checkInProgress.Checked && request.Type == RequestType.InProgress) || (checkCompleted.Checked && request.Type == RequestType.Completed))).ToListAsync();
+                dataGridView1.DataSource = await _alOsmanyDbContext.Requests.Where(request => request.CreatedBy == _userLoggedIn.Id && ((checkNew.Checked && request.Type == RequestType.New) || (checkAssigned.Checked && request.Type == RequestType.Assigned) || (checkInProgress.Checked && request.Type == RequestType.InProgress) || (checkCompleted.Checked && request.Type == RequestType.Completed))).ToListAsync();
             else if (_userLoggedIn.Role == UserRole.Worker)
                 dataGridView1.DataSource = await _alOsmanyDbContext.Requests.Where(request => request.WorkerId == _userLoggedIn.Id && ((checkNew.Checked && request.Type == RequestType.New) || (checkAssigned.Checked && request.Type == RequestType.Assigned) || (checkInProgress.Checked && request.Type == RequestType.InProgress) || (checkCompleted.Checked && request.Type == RequestType.Completed))).ToListAsync();
             else
@@ -65,8 +65,8 @@ namespace AlOsmany.Forms
             txtId.Text = string.Empty;
             comboType.Items.Clear();
             txtTotalFees.Text = string.Empty;
-            txtDate.Text = string.Empty;
-            txtCustomer.Text = string.Empty;
+            txtCreatedAt.Text = string.Empty;
+            txtCreatedBy.Text = string.Empty;
             txtWorker.Text = string.Empty;
         }
 
@@ -97,12 +97,12 @@ namespace AlOsmany.Forms
                 comboType.SelectedItem = selectedRequest.Type;
 
                 txtTotalFees.Text = selectedRequest.TotalFees.ToString();
-                txtDate.Text = selectedRequest.Date.ToString();
+                txtCreatedAt.Text = selectedRequest.CreatedAt.ToString();
 
-                var customer = _alOsmanyDbContext.Users.Where(user => user.Id == selectedRequest.CustomerId).FirstOrDefault();
+                var customer = _alOsmanyDbContext.Users.Where(user => user.Id == selectedRequest.CreatedBy).FirstOrDefault();
                 var worker = _alOsmanyDbContext.Users.Where(user => user.Id == selectedRequest.WorkerId).FirstOrDefault();
 
-                txtCustomer.Text = customer.UserName;
+                txtCreatedBy.Text = customer.UserName;
                 txtWorker.Text = worker is null ? string.Empty : worker.UserName;
             }
         }
@@ -114,8 +114,8 @@ namespace AlOsmany.Forms
             txtId.Text = string.Empty;
             comboType.Items.Clear();
             txtTotalFees.Text = string.Empty;
-            txtDate.Text = string.Empty;
-            txtCustomer.Text = string.Empty;
+            txtCreatedAt.Text = string.Empty;
+            txtCreatedBy.Text = string.Empty;
             txtWorker.Text = string.Empty;
 
             checkNew.Checked = false;
@@ -124,7 +124,7 @@ namespace AlOsmany.Forms
             checkCompleted.Checked = false;
 
             if (_userLoggedIn.Role == UserRole.Customer)
-                dataGridView1.DataSource = await _alOsmanyDbContext.Requests.Where(request => request.CustomerId == _userLoggedIn.Id).ToListAsync();
+                dataGridView1.DataSource = await _alOsmanyDbContext.Requests.Where(request => request.CreatedBy == _userLoggedIn.Id).ToListAsync();
             else if (_userLoggedIn.Role == UserRole.Worker)
                 dataGridView1.DataSource = await _alOsmanyDbContext.Requests.Where(request => request.WorkerId == _userLoggedIn.Id).ToListAsync();
             else

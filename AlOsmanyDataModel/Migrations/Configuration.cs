@@ -32,11 +32,11 @@ namespace AlOsmanyDataModel.Migrations
 
             if (!context.Services.Any())
             {
-                context.Services.Add(new Service { Name = "Printing A4 - Black and White", Fees = 0.8, Notes = "A4"});
-                context.Services.Add(new Service { Name = "Printing A4 - Color", Fees = 2.5, Notes = "A4" });
+                context.Services.Add(new Service { Name = "Printing A4 - Black and White", Fees = 0.8m, Notes = "A4"});
+                context.Services.Add(new Service { Name = "Printing A4 - Color", Fees = 2.5m, Notes = "A4" });
                 
-                context.Services.Add(new Service { Name = "Binding - Comb Binding", Fees = 5.5 });
-                context.Services.Add(new Service { Name = "Binding - Thick Cover", Fees = 9.3 });
+                context.Services.Add(new Service { Name = "Binding - Comb Binding", Fees = 5.5m });
+                context.Services.Add(new Service { Name = "Binding - Thick Cover", Fees = 9.3m });
                 
                 context.Services.Add(new Service { Name = "Printing - Poster", Fees = 6, Notes = "A0, A1" });
                 context.Services.Add(new Service { Name = "Printing - Poster", Fees = 3, Notes = "A2, A3" });

@@ -139,6 +139,7 @@
     </Compile>
     <EmbeddedResource Include="Forms\Services\Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

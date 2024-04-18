@@ -69,20 +69,6 @@ namespace AlOsmany.Forms.Services
             Clear();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (dataGridView1.SelectedCells.Count == 0)
-                return;
-
-            var id = (int)dataGridView1.CurrentRow.Cells[0].Value;
-
-            var selectedService = _requestedServices.Where(service => service.Id == id).FirstOrDefault();
-            _requestedServices.Remove(selectedService);
-
-            MessageBox.Show("Service removed from cart.", "Cart");
-            Clear();
-        }
-
         private void dataGridView1_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedCells.Count != 0)
@@ -96,6 +82,9 @@ namespace AlOsmany.Forms.Services
                 txtDiscount.Text = selectedService.Discount.ToString();
                 txtSurcharge.Text = selectedService.Surcharge.ToString();
                 txtNotes.Text = selectedService.Notes;
+                txtCount.Text = selectedService.Count.ToString();
+
+                checkUrgent.Checked = selectedService.Urgent;
                 pictureBox1.ImageLocation = selectedService.Image;
             }
         }
@@ -121,7 +110,24 @@ namespace AlOsmany.Forms.Services
             txtDiscount.Text = string.Empty;
             txtSurcharge.Text = string.Empty;
             txtNotes.Text = string.Empty;
+            txtCount.Text = string.Empty;
+
+            checkUrgent.Checked = false;
             pictureBox1.ImageLocation = string.Empty;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedCells.Count == 0)
+                return;
+
+            var id = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            var selectedService = _requestedServices.Where(service => service.Id == id).FirstOrDefault();
+            _requestedServices.Remove(selectedService);
+
+            MessageBox.Show("Service removed from cart.", "Cart");
+            Clear();
         }
     }
 }

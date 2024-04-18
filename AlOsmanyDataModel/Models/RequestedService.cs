@@ -8,14 +8,22 @@ namespace AlOsmanyDataModel.Models
     public class RequestedService
     {
         public RequestedService() { }
-        public RequestedService(Service service)
+        public RequestedService(Service service, int count, bool urgent)
         {
             Name = service.Name;
-            Fees = service.Fees;
-            Discount = service.Discount;
-            Surcharge = service.Surcharge;
+            Count = count;
+            Urgent = urgent;
+            Fees = service.Fees * count;
+            Discount = service.Discount * count;
+            Surcharge = service.Surcharge * count;
             Notes = service.Notes;
             Image = service.Image;
+
+            if (count >= 100)
+                Discount += (Fees * 10 / 100);
+
+            if (urgent)
+                Surcharge += (Fees * 30 / 100);
 
             CreatedAt = DateTime.UtcNow;
             ServiceId = service.Id;
@@ -36,6 +44,10 @@ namespace AlOsmanyDataModel.Models
 
         [Required]
         public DateTime CreatedAt { get; set; }
+        [Required]
+        public int Count { get; set; }
+        [Required]
+        public bool Urgent { get; set; }
 
         [Required]
         public int ServiceId { get; set; }

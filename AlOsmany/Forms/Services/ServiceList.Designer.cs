@@ -57,6 +57,11 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkUrgent = new System.Windows.Forms.CheckBox();
+            this.txtCount = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -168,7 +173,7 @@
             this.txtNotes.Location = new System.Drawing.Point(1015, 475);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(200, 200);
+            this.txtNotes.Size = new System.Drawing.Size(200, 100);
             this.txtNotes.TabIndex = 39;
             // 
             // label11
@@ -373,6 +378,63 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1015, 580);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 29);
+            this.label1.TabIndex = 88;
+            this.label1.Text = "Count";
+            // 
+            // checkUrgent
+            // 
+            this.checkUrgent.AutoSize = true;
+            this.checkUrgent.BackColor = System.Drawing.Color.Transparent;
+            this.checkUrgent.Enabled = false;
+            this.checkUrgent.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkUrgent.Location = new System.Drawing.Point(1015, 640);
+            this.checkUrgent.Name = "checkUrgent";
+            this.checkUrgent.Size = new System.Drawing.Size(110, 33);
+            this.checkUrgent.TabIndex = 90;
+            this.checkUrgent.Text = "Urgent";
+            this.checkUrgent.UseVisualStyleBackColor = false;
+            // 
+            // txtCount
+            // 
+            this.txtCount.Location = new System.Drawing.Point(1015, 615);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.ReadOnly = true;
+            this.txtCount.Size = new System.Drawing.Size(200, 22);
+            this.txtCount.TabIndex = 91;
+            this.txtCount.Text = "1";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(1090, 585);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(26, 29);
+            this.label15.TabIndex = 96;
+            this.label15.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(1120, 645);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 29);
+            this.label14.TabIndex = 97;
+            this.label14.Text = "*";
+            // 
             // ServiceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,6 +442,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 688);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtCount);
+            this.Controls.Add(this.checkUrgent);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.txtNotes);
@@ -448,5 +515,10 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartToolStripMenuItem;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkUrgent;
+        private System.Windows.Forms.TextBox txtCount;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }

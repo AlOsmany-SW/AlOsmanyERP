@@ -41,6 +41,9 @@ namespace AlOsmany.Forms.Services
                 txtDiscount.ReadOnly = true;
                 txtSurcharge.ReadOnly = true;
                 txtNotes.ReadOnly = true;
+                txtCount.ReadOnly = false;
+
+                checkUrgent.Enabled = true;
                 pictureBox1.Enabled = false;
             }
         }
@@ -128,17 +131,29 @@ namespace AlOsmany.Forms.Services
         {
             if (dataGridView1.SelectedCells.Count != 0)
             {
-                var id = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                try
+                {
+                    var id = (int)dataGridView1.CurrentRow.Cells[0].Value;
 
-                var selectedService = _alOsmanyDbContext.Services.Where(service => service.Id == id).FirstOrDefault();
+                    var selectedService = _alOsmanyDbContext.Services.Where(service => service.Id == id).FirstOrDefault();
+                    
+                    var count = int.Parse(txtCount.Text);
 
-                var requestedService = new RequestedService(selectedService);
-                requestedService.Id = _requestedServices.Count;
+                    if (count < 1)
+                        throw new FormatException();
 
-                _requestedServices.Add(requestedService);
+                    var requestedService = new RequestedService(selectedService, count, checkUrgent.Checked);
+                    requestedService.Id = _requestedServices.Count;
 
-                MessageBox.Show("Service added to cart.", "Cart");
-                Clear();
+                    _requestedServices.Add(requestedService);
+
+                    MessageBox.Show("Service added to cart.", "Cart");
+                    Clear();
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Count should be more than 0.", "Cart", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -178,6 +193,9 @@ namespace AlOsmany.Forms.Services
                 txtSurcharge.Text = selectedService.Surcharge.ToString();
                 txtNotes.Text = selectedService.Notes;
                 pictureBox1.ImageLocation = selectedService.Image;
+
+                txtCount.Text = "1";
+                checkUrgent.Checked = false;
             }
         }
 

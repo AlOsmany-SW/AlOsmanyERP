@@ -31,37 +31,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceList));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtSearchName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddCart = new System.Windows.Forms.Button();
             this.txtNotes = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labelRSurcharge = new System.Windows.Forms.Label();
+            this.labelRDiscount = new System.Windows.Forms.Label();
+            this.labelRFees = new System.Windows.Forms.Label();
+            this.labelRName = new System.Windows.Forms.Label();
             this.txtSurcharge = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelNotes = new System.Windows.Forms.Label();
+            this.labelSurcharge = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelImage = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.txtFees = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelDiscount = new System.Windows.Forms.Label();
+            this.labelFees = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelCount = new System.Windows.Forms.Label();
             this.checkUrgent = new System.Windows.Forms.CheckBox();
             this.txtCount = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelRCount = new System.Windows.Forms.Label();
+            this.labelRUrgent = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -85,21 +84,10 @@
             // 
             // txtSearchName
             // 
-            this.txtSearchName.Location = new System.Drawing.Point(915, 130);
+            this.txtSearchName.Location = new System.Drawing.Point(800, 130);
             this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(300, 22);
+            this.txtSearchName.Size = new System.Drawing.Size(380, 22);
             this.txtSearchName.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(775, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 29);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Name";
             // 
             // button1
             // 
@@ -146,11 +134,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(900, 50);
+            this.label3.Location = new System.Drawing.Point(925, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 48);
+            this.label3.Size = new System.Drawing.Size(167, 48);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Service List";
+            this.label3.Text = "Services";
             // 
             // btnAddCart
             // 
@@ -176,53 +164,53 @@
             this.txtNotes.Size = new System.Drawing.Size(200, 100);
             this.txtNotes.TabIndex = 39;
             // 
-            // label11
+            // labelRSurcharge
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(900, 405);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 29);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "*";
+            this.labelRSurcharge.AutoSize = true;
+            this.labelRSurcharge.BackColor = System.Drawing.Color.Transparent;
+            this.labelRSurcharge.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRSurcharge.ForeColor = System.Drawing.Color.Red;
+            this.labelRSurcharge.Location = new System.Drawing.Point(900, 405);
+            this.labelRSurcharge.Name = "labelRSurcharge";
+            this.labelRSurcharge.Size = new System.Drawing.Size(26, 29);
+            this.labelRSurcharge.TabIndex = 38;
+            this.labelRSurcharge.Text = "*";
             // 
-            // label10
+            // labelRDiscount
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(900, 365);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 29);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "*";
+            this.labelRDiscount.AutoSize = true;
+            this.labelRDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.labelRDiscount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRDiscount.ForeColor = System.Drawing.Color.Red;
+            this.labelRDiscount.Location = new System.Drawing.Point(900, 365);
+            this.labelRDiscount.Name = "labelRDiscount";
+            this.labelRDiscount.Size = new System.Drawing.Size(26, 29);
+            this.labelRDiscount.TabIndex = 37;
+            this.labelRDiscount.Text = "*";
             // 
-            // label9
+            // labelRFees
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(900, 325);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 29);
-            this.label9.TabIndex = 36;
-            this.label9.Text = "*";
+            this.labelRFees.AutoSize = true;
+            this.labelRFees.BackColor = System.Drawing.Color.Transparent;
+            this.labelRFees.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRFees.ForeColor = System.Drawing.Color.Red;
+            this.labelRFees.Location = new System.Drawing.Point(900, 325);
+            this.labelRFees.Name = "labelRFees";
+            this.labelRFees.Size = new System.Drawing.Size(26, 29);
+            this.labelRFees.TabIndex = 36;
+            this.labelRFees.Text = "*";
             // 
-            // label8
+            // labelRName
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(900, 285);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 29);
-            this.label8.TabIndex = 35;
-            this.label8.Text = "*";
+            this.labelRName.AutoSize = true;
+            this.labelRName.BackColor = System.Drawing.Color.Transparent;
+            this.labelRName.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRName.ForeColor = System.Drawing.Color.Red;
+            this.labelRName.Location = new System.Drawing.Point(900, 285);
+            this.labelRName.Name = "labelRName";
+            this.labelRName.Size = new System.Drawing.Size(26, 29);
+            this.labelRName.TabIndex = 35;
+            this.labelRName.Text = "*";
             // 
             // txtSurcharge
             // 
@@ -232,27 +220,27 @@
             this.txtSurcharge.TabIndex = 26;
             this.txtSurcharge.Text = "0";
             // 
-            // label7
+            // labelNotes
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1015, 440);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 29);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Notes";
+            this.labelNotes.AutoSize = true;
+            this.labelNotes.BackColor = System.Drawing.Color.Transparent;
+            this.labelNotes.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNotes.Location = new System.Drawing.Point(1015, 440);
+            this.labelNotes.Name = "labelNotes";
+            this.labelNotes.Size = new System.Drawing.Size(73, 29);
+            this.labelNotes.TabIndex = 27;
+            this.labelNotes.Text = "Notes";
             // 
-            // label6
+            // labelSurcharge
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(775, 405);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 29);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "Surcharge";
+            this.labelSurcharge.AutoSize = true;
+            this.labelSurcharge.BackColor = System.Drawing.Color.Transparent;
+            this.labelSurcharge.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSurcharge.Location = new System.Drawing.Point(775, 405);
+            this.labelSurcharge.Name = "labelSurcharge";
+            this.labelSurcharge.Size = new System.Drawing.Size(124, 29);
+            this.labelSurcharge.TabIndex = 29;
+            this.labelSurcharge.Text = "Surcharge";
             // 
             // txtName
             // 
@@ -261,27 +249,27 @@
             this.txtName.Size = new System.Drawing.Size(285, 22);
             this.txtName.TabIndex = 23;
             // 
-            // label2
+            // labelName
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(775, 285);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 29);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Name";
+            this.labelName.AutoSize = true;
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
+            this.labelName.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(775, 285);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(75, 29);
+            this.labelName.TabIndex = 30;
+            this.labelName.Text = "Name";
             // 
-            // label4
+            // labelImage
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(775, 440);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 29);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Image";
+            this.labelImage.AutoSize = true;
+            this.labelImage.BackColor = System.Drawing.Color.Transparent;
+            this.labelImage.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelImage.Location = new System.Drawing.Point(775, 440);
+            this.labelImage.Name = "labelImage";
+            this.labelImage.Size = new System.Drawing.Size(80, 29);
+            this.labelImage.TabIndex = 31;
+            this.labelImage.Text = "Image";
             // 
             // btnUpdate
             // 
@@ -314,27 +302,27 @@
             this.txtFees.TabIndex = 24;
             this.txtFees.Text = "0";
             // 
-            // label12
+            // labelDiscount
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(775, 365);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 29);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Discount";
+            this.labelDiscount.AutoSize = true;
+            this.labelDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.labelDiscount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiscount.Location = new System.Drawing.Point(775, 365);
+            this.labelDiscount.Name = "labelDiscount";
+            this.labelDiscount.Size = new System.Drawing.Size(108, 29);
+            this.labelDiscount.TabIndex = 33;
+            this.labelDiscount.Text = "Discount";
             // 
-            // label13
+            // labelFees
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(775, 325);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 29);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Fees";
+            this.labelFees.AutoSize = true;
+            this.labelFees.BackColor = System.Drawing.Color.Transparent;
+            this.labelFees.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFees.Location = new System.Drawing.Point(775, 325);
+            this.labelFees.Name = "labelFees";
+            this.labelFees.Size = new System.Drawing.Size(62, 29);
+            this.labelFees.TabIndex = 34;
+            this.labelFees.Text = "Fees";
             // 
             // menuStrip1
             // 
@@ -344,7 +332,7 @@
             this.cartToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1232, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1232, 28);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -378,22 +366,22 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // label1
+            // labelCount
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1015, 580);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 29);
-            this.label1.TabIndex = 88;
-            this.label1.Text = "Count";
+            this.labelCount.AutoSize = true;
+            this.labelCount.BackColor = System.Drawing.Color.Transparent;
+            this.labelCount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCount.Location = new System.Drawing.Point(1015, 580);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(78, 29);
+            this.labelCount.TabIndex = 88;
+            this.labelCount.Text = "Count";
+            this.labelCount.Visible = false;
             // 
             // checkUrgent
             // 
             this.checkUrgent.AutoSize = true;
             this.checkUrgent.BackColor = System.Drawing.Color.Transparent;
-            this.checkUrgent.Enabled = false;
             this.checkUrgent.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkUrgent.Location = new System.Drawing.Point(1015, 640);
             this.checkUrgent.Name = "checkUrgent";
@@ -401,39 +389,42 @@
             this.checkUrgent.TabIndex = 90;
             this.checkUrgent.Text = "Urgent";
             this.checkUrgent.UseVisualStyleBackColor = false;
+            this.checkUrgent.Visible = false;
             // 
             // txtCount
             // 
             this.txtCount.Location = new System.Drawing.Point(1015, 615);
             this.txtCount.Name = "txtCount";
-            this.txtCount.ReadOnly = true;
             this.txtCount.Size = new System.Drawing.Size(200, 22);
             this.txtCount.TabIndex = 91;
             this.txtCount.Text = "1";
+            this.txtCount.Visible = false;
             // 
-            // label15
+            // labelRCount
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(1090, 585);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(26, 29);
-            this.label15.TabIndex = 96;
-            this.label15.Text = "*";
+            this.labelRCount.AutoSize = true;
+            this.labelRCount.BackColor = System.Drawing.Color.Transparent;
+            this.labelRCount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRCount.ForeColor = System.Drawing.Color.Red;
+            this.labelRCount.Location = new System.Drawing.Point(1090, 585);
+            this.labelRCount.Name = "labelRCount";
+            this.labelRCount.Size = new System.Drawing.Size(26, 29);
+            this.labelRCount.TabIndex = 96;
+            this.labelRCount.Text = "*";
+            this.labelRCount.Visible = false;
             // 
-            // label14
+            // labelRUrgent
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(1120, 645);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(26, 29);
-            this.label14.TabIndex = 97;
-            this.label14.Text = "*";
+            this.labelRUrgent.AutoSize = true;
+            this.labelRUrgent.BackColor = System.Drawing.Color.Transparent;
+            this.labelRUrgent.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRUrgent.ForeColor = System.Drawing.Color.Red;
+            this.labelRUrgent.Location = new System.Drawing.Point(1120, 645);
+            this.labelRUrgent.Name = "labelRUrgent";
+            this.labelRUrgent.Size = new System.Drawing.Size(26, 29);
+            this.labelRUrgent.TabIndex = 97;
+            this.labelRUrgent.Text = "*";
+            this.labelRUrgent.Visible = false;
             // 
             // ServiceList
             // 
@@ -442,36 +433,35 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 688);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.labelRUrgent);
+            this.Controls.Add(this.labelRCount);
             this.Controls.Add(this.txtCount);
             this.Controls.Add(this.checkUrgent);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCount);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.txtNotes);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.labelRSurcharge);
+            this.Controls.Add(this.labelRDiscount);
+            this.Controls.Add(this.labelRFees);
+            this.Controls.Add(this.labelRName);
             this.Controls.Add(this.txtSurcharge);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelNotes);
+            this.Controls.Add(this.labelSurcharge);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelImage);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.txtFees);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.labelDiscount);
+            this.Controls.Add(this.labelFees);
             this.Controls.Add(this.btnAddCart);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSearchName);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ServiceList";
@@ -489,36 +479,35 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtSearchName;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAddCart;
         private System.Windows.Forms.TextBox txtNotes;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelRSurcharge;
+        private System.Windows.Forms.Label labelRDiscount;
+        private System.Windows.Forms.Label labelRFees;
+        private System.Windows.Forms.Label labelRName;
         private System.Windows.Forms.TextBox txtSurcharge;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelNotes;
+        private System.Windows.Forms.Label labelSurcharge;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelImage;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.TextBox txtFees;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelDiscount;
+        private System.Windows.Forms.Label labelFees;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartToolStripMenuItem;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.CheckBox checkUrgent;
         private System.Windows.Forms.TextBox txtCount;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelRCount;
+        private System.Windows.Forms.Label labelRUrgent;
     }
 }

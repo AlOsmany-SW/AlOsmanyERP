@@ -77,14 +77,6 @@ namespace AlOsmany.Forms.Services
 
                 var selectedService = _requestedServices.Where(service => service.Id == id).FirstOrDefault();
 
-                txtName.Text = selectedService.Name;
-                txtFees.Text = selectedService.Fees.ToString();
-                txtDiscount.Text = selectedService.Discount.ToString();
-                txtSurcharge.Text = selectedService.Surcharge.ToString();
-                txtNotes.Text = selectedService.Notes;
-                txtCount.Text = selectedService.Count.ToString();
-
-                checkUrgent.Checked = selectedService.Urgent;
                 pictureBox1.ImageLocation = selectedService.Image;
             }
         }
@@ -105,14 +97,6 @@ namespace AlOsmany.Forms.Services
 
             txtTotalMoney.Text = totalMoney.ToString();
 
-            txtName.Text = string.Empty;
-            txtFees.Text = string.Empty;
-            txtDiscount.Text = string.Empty;
-            txtSurcharge.Text = string.Empty;
-            txtNotes.Text = string.Empty;
-            txtCount.Text = string.Empty;
-
-            checkUrgent.Checked = false;
             pictureBox1.ImageLocation = string.Empty;
         }
 

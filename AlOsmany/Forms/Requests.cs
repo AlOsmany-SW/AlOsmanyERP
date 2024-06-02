@@ -64,9 +64,6 @@ namespace AlOsmany.Forms
 
             txtId.Text = string.Empty;
             comboType.Items.Clear();
-            txtTotalFees.Text = string.Empty;
-            txtCreatedAt.Text = string.Empty;
-            txtCreatedBy.Text = string.Empty;
             txtWorker.Text = string.Empty;
         }
 
@@ -96,13 +93,9 @@ namespace AlOsmany.Forms
                 
                 comboType.SelectedItem = selectedRequest.Type;
 
-                txtTotalFees.Text = selectedRequest.TotalFees.ToString();
-                txtCreatedAt.Text = selectedRequest.CreatedAt.ToString();
-
                 var customer = _alOsmanyDbContext.Users.Where(user => user.Id == selectedRequest.CreatedBy).FirstOrDefault();
                 var worker = _alOsmanyDbContext.Users.Where(user => user.Id == selectedRequest.WorkerId).FirstOrDefault();
 
-                txtCreatedBy.Text = customer.UserName;
                 txtWorker.Text = worker is null ? string.Empty : worker.UserName;
             }
         }
@@ -113,9 +106,6 @@ namespace AlOsmany.Forms
 
             txtId.Text = string.Empty;
             comboType.Items.Clear();
-            txtTotalFees.Text = string.Empty;
-            txtCreatedAt.Text = string.Empty;
-            txtCreatedBy.Text = string.Empty;
             txtWorker.Text = string.Empty;
 
             checkNew.Checked = false;

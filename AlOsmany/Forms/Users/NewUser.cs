@@ -13,15 +13,12 @@ namespace AlOsmany.Forms.Users
         private string _imagePath;
         private readonly User _userLoggedIn;
 
-        public NewUser(User userLoggedIn, params UserRole[] roles)
+        public NewUser(User userLoggedIn)
         {
             InitializeComponent();
 
             _imagePath = string.Empty;
             _userLoggedIn = userLoggedIn;
-
-            foreach (var role in roles)
-                comboBox1.Items.Add(role.ToString());
 
             comboBox1.SelectedIndex = 0;
         }

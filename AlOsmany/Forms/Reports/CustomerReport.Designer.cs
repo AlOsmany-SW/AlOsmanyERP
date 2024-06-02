@@ -40,8 +40,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtMonth = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtFullName = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -74,20 +72,20 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1102, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1102, 30);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 26);
             this.exitToolStripMenuItem.Text = "EXIT";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // txtFees
             // 
-            this.txtFees.Location = new System.Drawing.Point(834, 512);
+            this.txtFees.Location = new System.Drawing.Point(834, 540);
             this.txtFees.Name = "txtFees";
             this.txtFees.ReadOnly = true;
             this.txtFees.Size = new System.Drawing.Size(250, 22);
@@ -113,7 +111,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(629, 507);
+            this.label5.Location = new System.Drawing.Point(630, 535);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 29);
             this.label5.TabIndex = 85;
@@ -121,7 +119,7 @@
             // 
             // txtRequests
             // 
-            this.txtRequests.Location = new System.Drawing.Point(834, 552);
+            this.txtRequests.Location = new System.Drawing.Point(834, 575);
             this.txtRequests.Name = "txtRequests";
             this.txtRequests.ReadOnly = true;
             this.txtRequests.Size = new System.Drawing.Size(250, 22);
@@ -163,28 +161,9 @@
             this.label3.TabIndex = 122;
             this.label3.Text = "Month";
             // 
-            // txtFullName
-            // 
-            this.txtFullName.Location = new System.Drawing.Point(799, 237);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.ReadOnly = true;
-            this.txtFullName.Size = new System.Drawing.Size(285, 22);
-            this.txtFullName.TabIndex = 123;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(649, 232);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(125, 29);
-            this.label15.TabIndex = 124;
-            this.label15.Text = "Full Name";
-            // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(799, 267);
+            this.txtUserName.Location = new System.Drawing.Point(800, 250);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.ReadOnly = true;
             this.txtUserName.Size = new System.Drawing.Size(285, 22);
@@ -195,7 +174,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(649, 262);
+            this.label16.Location = new System.Drawing.Point(650, 245);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(126, 29);
             this.label16.TabIndex = 126;
@@ -209,7 +188,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(994, 302);
+            this.button2.Location = new System.Drawing.Point(995, 285);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 127;
@@ -221,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(629, 547);
+            this.label1.Location = new System.Drawing.Point(630, 570);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 29);
             this.label1.TabIndex = 128;
@@ -250,8 +229,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtFullName);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMonth);
             this.Controls.Add(this.txtFees);
@@ -286,8 +263,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtMonth;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtFullName;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;

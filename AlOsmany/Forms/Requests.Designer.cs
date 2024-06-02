@@ -42,14 +42,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTotalFees = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtWorker = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCreatedBy = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtCreatedAt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.comboType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -90,14 +84,14 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1232, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1232, 30);
             this.menuStrip1.TabIndex = 40;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 26);
             this.exitToolStripMenuItem.Text = "EXIT";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -181,7 +175,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(930, 290);
+            this.txtId.Location = new System.Drawing.Point(930, 405);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(285, 22);
@@ -192,7 +186,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(775, 285);
+            this.label2.Location = new System.Drawing.Point(775, 400);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 29);
             this.label2.TabIndex = 53;
@@ -203,34 +197,15 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(775, 325);
+            this.label1.Location = new System.Drawing.Point(775, 450);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 29);
             this.label1.TabIndex = 55;
             this.label1.Text = "Type";
             // 
-            // txtTotalFees
-            // 
-            this.txtTotalFees.Location = new System.Drawing.Point(930, 370);
-            this.txtTotalFees.Name = "txtTotalFees";
-            this.txtTotalFees.ReadOnly = true;
-            this.txtTotalFees.Size = new System.Drawing.Size(285, 22);
-            this.txtTotalFees.TabIndex = 56;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(775, 365);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 29);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Total Fees";
-            // 
             // txtWorker
             // 
-            this.txtWorker.Location = new System.Drawing.Point(930, 490);
+            this.txtWorker.Location = new System.Drawing.Point(930, 505);
             this.txtWorker.Name = "txtWorker";
             this.txtWorker.ReadOnly = true;
             this.txtWorker.Size = new System.Drawing.Size(285, 22);
@@ -241,49 +216,11 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(775, 485);
+            this.label5.Location = new System.Drawing.Point(775, 500);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 29);
             this.label5.TabIndex = 59;
             this.label5.Text = "Worker";
-            // 
-            // txtCreatedBy
-            // 
-            this.txtCreatedBy.Location = new System.Drawing.Point(930, 450);
-            this.txtCreatedBy.Name = "txtCreatedBy";
-            this.txtCreatedBy.ReadOnly = true;
-            this.txtCreatedBy.Size = new System.Drawing.Size(285, 22);
-            this.txtCreatedBy.TabIndex = 60;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(775, 445);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 29);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "Customer";
-            // 
-            // txtCreatedAt
-            // 
-            this.txtCreatedAt.Location = new System.Drawing.Point(930, 410);
-            this.txtCreatedAt.Name = "txtCreatedAt";
-            this.txtCreatedAt.ReadOnly = true;
-            this.txtCreatedAt.Size = new System.Drawing.Size(285, 22);
-            this.txtCreatedAt.TabIndex = 62;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(775, 405);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 29);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "CreatedAt";
             // 
             // button3
             // 
@@ -293,7 +230,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1080, 550);
+            this.button3.Location = new System.Drawing.Point(1080, 600);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 50);
             this.button3.TabIndex = 64;
@@ -305,7 +242,7 @@
             this.comboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboType.Enabled = false;
             this.comboType.FormattingEnabled = true;
-            this.comboType.Location = new System.Drawing.Point(930, 330);
+            this.comboType.Location = new System.Drawing.Point(930, 455);
             this.comboType.Name = "comboType";
             this.comboType.Size = new System.Drawing.Size(285, 24);
             this.comboType.TabIndex = 65;
@@ -319,14 +256,8 @@
             this.ClientSize = new System.Drawing.Size(1232, 688);
             this.Controls.Add(this.comboType);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.txtCreatedAt);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtCreatedBy);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtWorker);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtTotalFees);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
@@ -365,14 +296,8 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTotalFees;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtWorker;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCreatedBy;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCreatedAt;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboType;
     }

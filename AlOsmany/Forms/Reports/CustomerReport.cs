@@ -50,7 +50,6 @@ namespace AlOsmany.Forms.Reports
 
                 var selectedUser = _alOsmanyDbContext.Users.Where(user => user.Id == id).FirstOrDefault();
 
-                txtFullName.Text = selectedUser.FullName;
                 txtUserName.Text = selectedUser.UserName;
             }
         }
@@ -63,7 +62,6 @@ namespace AlOsmany.Forms.Reports
 
                 var selectedUser = _alOsmanyDbContext.Users.Where(user => user.Id == id).FirstOrDefault();
 
-                txtFullName.Text = selectedUser.FullName;
                 txtUserName.Text = selectedUser.UserName;
 
                 var year = 0;
@@ -118,7 +116,6 @@ namespace AlOsmany.Forms.Reports
                 user.PhoneNumber
             }).ToListAsync();
 
-            txtFullName.Text = string.Empty;
             txtUserName.Text = string.Empty;
 
             txtYear.Text = DateTime.UtcNow.Year.ToString();

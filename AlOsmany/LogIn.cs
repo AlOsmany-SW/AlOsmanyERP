@@ -38,15 +38,6 @@ namespace AlOsmany
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Close();
-
-            var thread = new Thread(() => Application.Run(new NewUser(null, UserRole.Customer)));
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();

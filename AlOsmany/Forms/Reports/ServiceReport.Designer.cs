@@ -40,8 +40,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtMonth = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -87,7 +85,7 @@
             // 
             // txtFees
             // 
-            this.txtFees.Location = new System.Drawing.Point(935, 510);
+            this.txtFees.Location = new System.Drawing.Point(935, 540);
             this.txtFees.Name = "txtFees";
             this.txtFees.ReadOnly = true;
             this.txtFees.Size = new System.Drawing.Size(250, 22);
@@ -113,7 +111,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(730, 505);
+            this.label5.Location = new System.Drawing.Point(730, 535);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 29);
             this.label5.TabIndex = 85;
@@ -121,7 +119,7 @@
             // 
             // txtRequests
             // 
-            this.txtRequests.Location = new System.Drawing.Point(935, 550);
+            this.txtRequests.Location = new System.Drawing.Point(935, 575);
             this.txtRequests.Name = "txtRequests";
             this.txtRequests.ReadOnly = true;
             this.txtRequests.Size = new System.Drawing.Size(250, 22);
@@ -163,27 +161,9 @@
             this.label3.TabIndex = 122;
             this.label3.Text = "Month";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(900, 235);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(285, 22);
-            this.txtId.TabIndex = 123;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(750, 230);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 29);
-            this.label15.TabIndex = 124;
-            this.label15.Text = "Id";
-            // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(900, 265);
+            this.txtName.Location = new System.Drawing.Point(900, 250);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(285, 22);
             this.txtName.TabIndex = 125;
@@ -193,7 +173,7 @@
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(750, 260);
+            this.label16.Location = new System.Drawing.Point(750, 245);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 29);
             this.label16.TabIndex = 126;
@@ -207,7 +187,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1095, 300);
+            this.button2.Location = new System.Drawing.Point(1095, 285);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 127;
@@ -219,7 +199,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(730, 545);
+            this.label1.Location = new System.Drawing.Point(730, 570);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 29);
             this.label1.TabIndex = 128;
@@ -248,8 +228,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtMonth);
             this.Controls.Add(this.txtFees);
@@ -284,8 +262,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtMonth;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button2;

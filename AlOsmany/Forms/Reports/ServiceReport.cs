@@ -44,7 +44,6 @@ namespace AlOsmany.Forms.Reports
 
                 var selectedService = _alOsmanyDbContext.Services.Where(service => service.Id == id).FirstOrDefault();
 
-                txtId.Text = selectedService.Id.ToString();
                 txtName.Text = selectedService.Name;
             }
         }
@@ -57,7 +56,6 @@ namespace AlOsmany.Forms.Reports
 
                 var selectedService = _alOsmanyDbContext.Services.Where(service => service.Id == id).FirstOrDefault();
 
-                txtId.Text = selectedService.Id.ToString();
                 txtName.Text = selectedService.Name;
 
                 var year = 0;
@@ -109,7 +107,6 @@ namespace AlOsmany.Forms.Reports
             dataGridView1.ClearSelection();
             dataGridView1.DataSource = await _alOsmanyDbContext.Services.ToListAsync();
 
-            txtId.Text = string.Empty;
             txtName.Text = string.Empty;
 
             txtYear.Text = DateTime.UtcNow.Year.ToString();

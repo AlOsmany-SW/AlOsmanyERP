@@ -36,15 +36,30 @@ namespace AlOsmany.Forms.Services
                 btnDelete.Visible = false;
                 cartToolStripMenuItem.Visible = true;
 
-                txtName.ReadOnly = true;
-                txtFees.ReadOnly = true;
-                txtDiscount.ReadOnly = true;
-                txtSurcharge.ReadOnly = true;
-                txtNotes.ReadOnly = true;
-                txtCount.ReadOnly = false;
+                txtName.Visible = false;
+                txtFees.Visible = false;
+                txtDiscount.Visible = false;
+                txtSurcharge.Visible = false;
+                txtNotes.Visible = false;
 
-                checkUrgent.Enabled = true;
+                labelName.Visible = false;
+                labelFees.Visible = false;
+                labelDiscount.Visible = false;
+                labelSurcharge.Visible = false;
+                labelNotes.Visible = false;
+
+                labelRName.Visible = false;
+                labelRFees.Visible = false;
+                labelRDiscount.Visible = false;
+                labelRSurcharge.Visible = false;
+
                 pictureBox1.Enabled = false;
+
+                txtCount.Visible = true;
+                labelCount.Visible = true;
+                labelRCount.Visible = true;
+                checkUrgent.Visible = true;
+                labelRUrgent.Visible = true;
             }
         }
 

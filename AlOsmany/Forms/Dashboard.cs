@@ -3,6 +3,7 @@ using AlOsmany.Forms.Services;
 using AlOsmany.Forms.Users;
 using AlOsmanyDataModel.Models;
 using System;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -21,15 +22,24 @@ namespace AlOsmany.Forms
             Text = _userLoggedIn.Role.ToString() + ": " + _userLoggedIn.FullName;
 
             if (_userLoggedIn.Role != UserRole.Admin)
+            {
+                newUserToolStripMenuItem.Visible = false;
                 userListToolStripMenuItem.Visible = false;
+                newServiceToolStripMenuItem.Visible = false;
+            }
+            else
+            {
+                btnRequests.Visible = false;
+                btnServices.Location = new Point(85, 105);
+            }
 
             if (_userLoggedIn.Role == UserRole.Worker)
-                newUserToolStripMenuItem.Visible = false;
+            {
+                btnServices.Visible = false;
+            }
 
             if (_userLoggedIn.Role == UserRole.Customer)
             {
-                newUserToolStripMenuItem.Visible = false;
-                newServiceToolStripMenuItem.Visible = false;
                 yearReportToolStripMenuItem.Visible = false;
                 serviceReportToolStripMenuItem.Visible = false;
                 customerReportToolStripMenuItem.Visible = false;
@@ -100,16 +110,9 @@ namespace AlOsmany.Forms
 
         private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NewUser newUser;
-
-            if (_userLoggedIn.Role == UserRole.Admin)
-                newUser = new NewUser(_userLoggedIn, UserRole.Customer, UserRole.Worker, UserRole.Manager, UserRole.Admin);
-            else
-                newUser = new NewUser(_userLoggedIn, UserRole.Worker);
-
             Close();
 
-            var thread = new Thread(() => Application.Run(newUser));
+            var thread = new Thread(() => Application.Run(new NewUser(_userLoggedIn)));
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }

@@ -45,10 +45,7 @@ namespace AlOsmany.Forms
                 txtWorker.ReadOnly = false;
 
                 comboBox1.Items.AddRange(new[] {
-                    "New",
-                    "Assigned",
-                    "InProgress",
-                    "Completed"});
+                    "Assigned"});
             }
 
             comboBox1.SelectedIndex = 0;

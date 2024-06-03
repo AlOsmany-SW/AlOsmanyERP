@@ -61,6 +61,7 @@
             this.txtCount = new System.Windows.Forms.TextBox();
             this.labelRCount = new System.Windows.Forms.Label();
             this.labelRUrgent = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -84,9 +85,9 @@
             // 
             // txtSearchName
             // 
-            this.txtSearchName.Location = new System.Drawing.Point(800, 130);
+            this.txtSearchName.Location = new System.Drawing.Point(930, 130);
             this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(380, 22);
+            this.txtSearchName.Size = new System.Drawing.Size(285, 22);
             this.txtSearchName.TabIndex = 14;
             // 
             // button1
@@ -121,9 +122,9 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(775, 475);
+            this.pictureBox1.Location = new System.Drawing.Point(775, 575);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -158,7 +159,7 @@
             // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(1015, 475);
+            this.txtNotes.Location = new System.Drawing.Point(1015, 575);
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(200, 100);
@@ -225,7 +226,7 @@
             this.labelNotes.AutoSize = true;
             this.labelNotes.BackColor = System.Drawing.Color.Transparent;
             this.labelNotes.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNotes.Location = new System.Drawing.Point(1015, 440);
+            this.labelNotes.Location = new System.Drawing.Point(1015, 540);
             this.labelNotes.Name = "labelNotes";
             this.labelNotes.Size = new System.Drawing.Size(73, 29);
             this.labelNotes.TabIndex = 27;
@@ -265,7 +266,7 @@
             this.labelImage.AutoSize = true;
             this.labelImage.BackColor = System.Drawing.Color.Transparent;
             this.labelImage.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelImage.Location = new System.Drawing.Point(775, 440);
+            this.labelImage.Location = new System.Drawing.Point(775, 540);
             this.labelImage.Name = "labelImage";
             this.labelImage.Size = new System.Drawing.Size(80, 29);
             this.labelImage.TabIndex = 31;
@@ -279,7 +280,7 @@
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(1080, 220);
+            this.btnUpdate.Location = new System.Drawing.Point(1080, 480);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(130, 50);
             this.btnUpdate.TabIndex = 28;
@@ -359,7 +360,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(930, 220);
+            this.btnDelete.Location = new System.Drawing.Point(775, 480);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(130, 50);
             this.btnDelete.TabIndex = 87;
@@ -371,7 +372,7 @@
             this.labelCount.AutoSize = true;
             this.labelCount.BackColor = System.Drawing.Color.Transparent;
             this.labelCount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCount.Location = new System.Drawing.Point(1015, 580);
+            this.labelCount.Location = new System.Drawing.Point(775, 445);
             this.labelCount.Name = "labelCount";
             this.labelCount.Size = new System.Drawing.Size(78, 29);
             this.labelCount.TabIndex = 88;
@@ -383,7 +384,7 @@
             this.checkUrgent.AutoSize = true;
             this.checkUrgent.BackColor = System.Drawing.Color.Transparent;
             this.checkUrgent.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkUrgent.Location = new System.Drawing.Point(1015, 640);
+            this.checkUrgent.Location = new System.Drawing.Point(775, 485);
             this.checkUrgent.Name = "checkUrgent";
             this.checkUrgent.Size = new System.Drawing.Size(110, 33);
             this.checkUrgent.TabIndex = 90;
@@ -393,9 +394,9 @@
             // 
             // txtCount
             // 
-            this.txtCount.Location = new System.Drawing.Point(1015, 615);
+            this.txtCount.Location = new System.Drawing.Point(930, 450);
             this.txtCount.Name = "txtCount";
-            this.txtCount.Size = new System.Drawing.Size(200, 22);
+            this.txtCount.Size = new System.Drawing.Size(285, 22);
             this.txtCount.TabIndex = 91;
             this.txtCount.Text = "1";
             this.txtCount.Visible = false;
@@ -406,7 +407,7 @@
             this.labelRCount.BackColor = System.Drawing.Color.Transparent;
             this.labelRCount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRCount.ForeColor = System.Drawing.Color.Red;
-            this.labelRCount.Location = new System.Drawing.Point(1090, 585);
+            this.labelRCount.Location = new System.Drawing.Point(900, 445);
             this.labelRCount.Name = "labelRCount";
             this.labelRCount.Size = new System.Drawing.Size(26, 29);
             this.labelRCount.TabIndex = 96;
@@ -419,12 +420,23 @@
             this.labelRUrgent.BackColor = System.Drawing.Color.Transparent;
             this.labelRUrgent.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRUrgent.ForeColor = System.Drawing.Color.Red;
-            this.labelRUrgent.Location = new System.Drawing.Point(1120, 645);
+            this.labelRUrgent.Location = new System.Drawing.Point(900, 485);
             this.labelRUrgent.Name = "labelRUrgent";
             this.labelRUrgent.Size = new System.Drawing.Size(26, 29);
             this.labelRUrgent.TabIndex = 97;
             this.labelRUrgent.Text = "*";
             this.labelRUrgent.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(775, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 29);
+            this.label1.TabIndex = 98;
+            this.label1.Text = "Service Name";
             // 
             // ServiceList
             // 
@@ -433,6 +445,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 688);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelRUrgent);
             this.Controls.Add(this.labelRCount);
             this.Controls.Add(this.txtCount);
@@ -465,7 +478,7 @@
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ServiceList";
-            this.Text = "Service List";
+            this.Text = "Services";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -509,5 +522,6 @@
         private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label labelRCount;
         private System.Windows.Forms.Label labelRUrgent;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -34,10 +34,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkNew = new System.Windows.Forms.CheckBox();
-            this.checkCompleted = new System.Windows.Forms.CheckBox();
-            this.checkAssigned = new System.Windows.Forms.CheckBox();
-            this.checkInProgress = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.comboType = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -103,60 +100,12 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(800, 200);
+            this.button1.Location = new System.Drawing.Point(1080, 200);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 50);
             this.button1.TabIndex = 42;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // checkNew
-            // 
-            this.checkNew.AutoSize = true;
-            this.checkNew.BackColor = System.Drawing.Color.Transparent;
-            this.checkNew.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkNew.Location = new System.Drawing.Point(1000, 120);
-            this.checkNew.Name = "checkNew";
-            this.checkNew.Size = new System.Drawing.Size(82, 33);
-            this.checkNew.TabIndex = 43;
-            this.checkNew.Text = "New";
-            this.checkNew.UseVisualStyleBackColor = false;
-            // 
-            // checkCompleted
-            // 
-            this.checkCompleted.AutoSize = true;
-            this.checkCompleted.BackColor = System.Drawing.Color.Transparent;
-            this.checkCompleted.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkCompleted.Location = new System.Drawing.Point(1000, 240);
-            this.checkCompleted.Name = "checkCompleted";
-            this.checkCompleted.Size = new System.Drawing.Size(150, 33);
-            this.checkCompleted.TabIndex = 44;
-            this.checkCompleted.Text = "Completed";
-            this.checkCompleted.UseVisualStyleBackColor = false;
-            // 
-            // checkAssigned
-            // 
-            this.checkAssigned.AutoSize = true;
-            this.checkAssigned.BackColor = System.Drawing.Color.Transparent;
-            this.checkAssigned.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkAssigned.Location = new System.Drawing.Point(1000, 160);
-            this.checkAssigned.Name = "checkAssigned";
-            this.checkAssigned.Size = new System.Drawing.Size(134, 33);
-            this.checkAssigned.TabIndex = 45;
-            this.checkAssigned.Text = "Assigned";
-            this.checkAssigned.UseVisualStyleBackColor = false;
-            // 
-            // checkInProgress
-            // 
-            this.checkInProgress.AutoSize = true;
-            this.checkInProgress.BackColor = System.Drawing.Color.Transparent;
-            this.checkInProgress.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkInProgress.Location = new System.Drawing.Point(1000, 200);
-            this.checkInProgress.Name = "checkInProgress";
-            this.checkInProgress.Size = new System.Drawing.Size(161, 33);
-            this.checkInProgress.TabIndex = 46;
-            this.checkInProgress.Text = "In Progress";
-            this.checkInProgress.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -166,7 +115,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(840, 140);
+            this.button2.Location = new System.Drawing.Point(800, 200);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 47;
@@ -247,6 +196,14 @@
             this.comboType.Size = new System.Drawing.Size(285, 24);
             this.comboType.TabIndex = 65;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(930, 150);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(285, 24);
+            this.comboBox1.TabIndex = 66;
+            // 
             // Requests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -254,6 +211,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1232, 688);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboType);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtWorker);
@@ -262,10 +220,6 @@
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.checkInProgress);
-            this.Controls.Add(this.checkAssigned);
-            this.Controls.Add(this.checkCompleted);
-            this.Controls.Add(this.checkNew);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label3);
@@ -288,10 +242,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkNew;
-        private System.Windows.Forms.CheckBox checkCompleted;
-        private System.Windows.Forms.CheckBox checkAssigned;
-        private System.Windows.Forms.CheckBox checkInProgress;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
@@ -300,5 +250,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboType;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

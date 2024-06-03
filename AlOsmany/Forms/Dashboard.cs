@@ -30,16 +30,13 @@ namespace AlOsmany.Forms
             else
             {
                 btnRequests.Visible = false;
+                btnServices.Visible = true;
                 btnServices.Location = new Point(85, 105);
-            }
-
-            if (_userLoggedIn.Role == UserRole.Worker)
-            {
-                btnServices.Visible = false;
             }
 
             if (_userLoggedIn.Role == UserRole.Customer)
             {
+                btnServices.Visible = true;
                 yearReportToolStripMenuItem.Visible = false;
                 serviceReportToolStripMenuItem.Visible = false;
                 customerReportToolStripMenuItem.Visible = false;

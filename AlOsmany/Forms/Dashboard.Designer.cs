@@ -58,56 +58,56 @@ namespace AlOsmany.Forms
             this.customerReportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(732, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(732, 28);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(52, 24);
             this.exitToolStripMenuItem.Text = "EXIT";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // userListToolStripMenuItem
             // 
             this.userListToolStripMenuItem.Name = "userListToolStripMenuItem";
-            this.userListToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
+            this.userListToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.userListToolStripMenuItem.Text = "User List";
             this.userListToolStripMenuItem.Click += new System.EventHandler(this.userListToolStripMenuItem_Click);
             // 
             // newUserToolStripMenuItem
             // 
             this.newUserToolStripMenuItem.Name = "newUserToolStripMenuItem";
-            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
+            this.newUserToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.newUserToolStripMenuItem.Text = "New User";
             this.newUserToolStripMenuItem.Click += new System.EventHandler(this.newUserToolStripMenuItem_Click);
             // 
             // newServiceToolStripMenuItem
             // 
             this.newServiceToolStripMenuItem.Name = "newServiceToolStripMenuItem";
-            this.newServiceToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
+            this.newServiceToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.newServiceToolStripMenuItem.Text = "New Service";
             this.newServiceToolStripMenuItem.Click += new System.EventHandler(this.newServiceToolStripMenuItem_Click_1);
             // 
             // yearReportToolStripMenuItem
             // 
             this.yearReportToolStripMenuItem.Name = "yearReportToolStripMenuItem";
-            this.yearReportToolStripMenuItem.Size = new System.Drawing.Size(100, 26);
+            this.yearReportToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.yearReportToolStripMenuItem.Text = "Year Report";
             this.yearReportToolStripMenuItem.Click += new System.EventHandler(this.yearReportToolStripMenuItem_Click);
             // 
             // serviceReportToolStripMenuItem
             // 
             this.serviceReportToolStripMenuItem.Name = "serviceReportToolStripMenuItem";
-            this.serviceReportToolStripMenuItem.Size = new System.Drawing.Size(119, 26);
+            this.serviceReportToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.serviceReportToolStripMenuItem.Text = "Service Report";
             this.serviceReportToolStripMenuItem.Click += new System.EventHandler(this.serviceReportToolStripMenuItem_Click);
             // 
             // customerReportToolStripMenuItem
             // 
             this.customerReportToolStripMenuItem.Name = "customerReportToolStripMenuItem";
-            this.customerReportToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.customerReportToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
             this.customerReportToolStripMenuItem.Text = "Customer Report";
             this.customerReportToolStripMenuItem.Click += new System.EventHandler(this.customerReportToolStripMenuItem_Click);
             // 
@@ -139,6 +139,7 @@ namespace AlOsmany.Forms
             this.btnServices.Size = new System.Drawing.Size(150, 150);
             this.btnServices.TabIndex = 44;
             this.btnServices.UseVisualStyleBackColor = false;
+            this.btnServices.Visible = false;
             this.btnServices.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnRequests

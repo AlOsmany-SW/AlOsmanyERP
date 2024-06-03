@@ -37,7 +37,9 @@ namespace AlOsmany.Forms
                 comboType.Enabled = true;
 
                 comboBox1.Items.AddRange(new[] {
-                    "Assigned"});
+                    "Assigned",
+                    "InProgress",
+                    "Completed"});
             }
             else
             {
